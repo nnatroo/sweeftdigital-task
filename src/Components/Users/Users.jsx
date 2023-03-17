@@ -20,23 +20,24 @@ const Users = (props) => {
       });
   }, [currentPage]);
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
 
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // });
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   const handleScroll = () => {
     if (
-      window.innerHeight + document.documentElement.scrollTop + 1 >=
-      document.documentElement.scrollHeight
+      window.innerHeight + window.scrollY >=
+      document.body.offsetHeight
     ) {
       setShowLoading(true);
-      setCurrentPage(currentPage + 1);
+      setTimeout(() => {
+        setCurrentPage(currentPage + 1);
+      }, 300);
+      console.log(currentPage);
     }
   };
-
-  // console.log(usersData);
 
   return (
     <>
@@ -52,11 +53,10 @@ const Users = (props) => {
             title={user.title}
           />
         ))}
-        <Skeleton animation="wave" width={"100%"} height={"100%"}/>
-        <Skeleton animation="wave" width={"100%"} height={"100%"}/>
-        <Skeleton animation="wave" width={"100%"} height={"100%"}/>
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
       </div>
-
       {showLoading && <Loading />}
     </>
   );
