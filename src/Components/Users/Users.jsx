@@ -55,11 +55,6 @@ const Users = (props) => {
         <Skeleton animation="wave" width={"100%"} height={"100%"}/>
         <Skeleton animation="wave" width={"100%"} height={"100%"}/>
         <Skeleton animation="wave" width={"100%"} height={"100%"}/>
-        <Skeleton animation="wave" width={"100%"} height={"100%"}/>
-        <Skeleton animation="wave" width={"100%"} height={"100%"}/>
-        <Skeleton animation="wave" width={"100%"} height={"100%"}/>
-        <Skeleton animation="wave" width={"100%"} height={"100%"}/>
-        <Skeleton animation="wave" width={"100%"} height={"100%"}/>
       </div>
 
       {showLoading && <Loading />}
