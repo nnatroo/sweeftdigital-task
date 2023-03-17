@@ -1,0 +1,23 @@
+.user-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 1px 1px 5px rgb(179, 179, 179);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.user-card-text {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.user-card-image {
+    border-radius: 10px 10px 0 0;
+}
+
+.user-card:hover {
+    box-shadow: 1px 1px 7px rgb(65, 65, 65);
+    transition: 0.5s;
+}
