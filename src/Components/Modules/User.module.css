@@ -21,3 +21,7 @@
     box-shadow: 1px 1px 5px rgb(211, 211, 211);
     transition: 0.3s;
 }
+
+a {
+    all: unset;
+}

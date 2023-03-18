@@ -3,11 +3,12 @@ import classes from "../Modules/Users.module.css";
 import { useEffect, useState } from "react";
 import Loading from "../UI/Loading";
 import Skeleton from "../UI/Skeleton";
+import { borderRadius, margin } from "@mui/system";
 
 const Users = (props) => {
   const [usersData, setUsersData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [showLoading, setShowLoading] = useState(true);
+  // const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -16,7 +17,7 @@ const Users = (props) => {
       .then((response) => response.json())
       .then((users) => {
         setUsersData((prevUsersData) => [...prevUsersData, ...users.list]);
-        setShowLoading(false);
+        // setShowLoading(false);
       });
   }, [currentPage]);
 
@@ -28,13 +29,13 @@ const Users = (props) => {
 
   const handleScroll = () => {
     if (
-      window.innerHeight + window.scrollY >=
+      window.innerHeight + window.scrollY - 1>=
       document.body.offsetHeight
     ) {
-      setShowLoading(true);
+      // setShowLoading(true);
       setTimeout(() => {
         setCurrentPage(currentPage + 1);
-      }, 300);
+      }, 500);
       console.log(currentPage);
     }
   };
@@ -56,8 +57,11 @@ const Users = (props) => {
         <Skeleton />
         <Skeleton />
         <Skeleton />
+        <Skeleton />
+        <Skeleton />
+        <Skeleton />
       </div>
-      {showLoading && <Loading />}
+      <Loading />
     </>
   );
 };

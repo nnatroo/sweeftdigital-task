@@ -2,7 +2,7 @@ import classes from "../Modules/User.module.css";
 
 const User = (props) => {
   return (
-    <>
+    <a href={`users/${props.id}`}>
       <div className={classes["user-card"]}>
         <img
           className={classes["user-card-image"]}
@@ -14,7 +14,7 @@ const User = (props) => {
           <span>{props.title}</span>
         </div>
       </div>
-    </>
+    </a>
   );
 };
 
