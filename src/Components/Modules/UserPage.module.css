@@ -24,7 +24,7 @@ legend {
     justify-content: space-evenly;
     margin: 0 17% 3%;
     padding: 2% 1%;
-    border-radius: 1rem;
+    border-radius: 0 0 1rem 1rem;
     box-shadow: -11px -4px 28px -11px rgba(0, 0, 0, 0.281);
 
 }

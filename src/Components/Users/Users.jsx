@@ -36,17 +36,16 @@ const Users = (props) => {
 
   const handleScroll = () => {
     if (window.innerHeight + window.scrollY - 1 >= document.body.offsetHeight) {
-      // setShowLoading(true);
       setTimeout(() => {
         setCurrentPage(currentPage + 1);
-      }, 500);
+      }, 400);
     }
   };
 
   return (
     <>
       <div className={classes.users}>
-        {usersData.map((user, index) => (
+        {usersData.map((user) => (
           <User
             key={user.id}
             id={user.id}
