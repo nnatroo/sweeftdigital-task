@@ -1,3 +1,24 @@
+fieldset {
+    border: none;
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 7px, transparent 7px) 0% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px) 100% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px) 0% 100%/8px 8px no-repeat,
+        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100% 100%/8px 8px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 2px) calc(100% - 16px) no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 2px) no-repeat,
+        linear-gradient(90deg, transparent 0%, #48abe0 100%);
+    border-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+legend {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+}
+
 .user-container {
     display: flex;
     justify-content: space-evenly;
@@ -49,5 +70,5 @@
     .user-address-container {
         width: 100%;
     }
-    
+
 }
