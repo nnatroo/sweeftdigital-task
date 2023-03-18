@@ -1,9 +1,10 @@
 .user-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 0 17%;
+    margin: 0 17% 3%;
     padding: 2% 1%;
     border-radius: 1rem;
+    box-shadow: -11px -4px 28px -11px rgba(0, 0, 0, 0.281);
 
 }
 
@@ -11,16 +12,23 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    box-shadow: -11px -4px 28px -11px rgba(0, 0, 0, 0.281);
+    border-radius: 1rem;
+    margin: 0 1rem;
 }
 
 
 .user-image {
     width: 300px;
+    border-radius: 0.8rem;
+    box-shadow: -11px -4px 28px -11px rgba(0, 0, 0, 0.281);
 }
 
 .user-address-container {
     display: flex;
     flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: -11px -4px 28px -11px rgba(0, 0, 0, 0.281);
 }
 
 .user-page-heading {
