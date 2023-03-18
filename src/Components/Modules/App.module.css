@@ -1,20 +1,17 @@
 body {
-    all: unset;
-    font-family: 'Roboto', sans-serif;
+  all: unset;
+  font-family: 'Roboto', sans-serif;
 }
 
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   width: 7px;
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #2d66ec;
 }

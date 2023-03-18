@@ -2,7 +2,7 @@ import classes from "../Modules/User.module.css";
 
 const User = (props) => {
   return (
-    <a href={`//${window.location.host}/users/${props.id}`} >
+    <a href={`//${window.location.host}/users/${props.id}`}>
       <div className={classes["user-card"]}>
         <img
           className={classes["user-card-image"]}

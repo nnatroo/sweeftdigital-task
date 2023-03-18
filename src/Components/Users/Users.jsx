@@ -9,7 +9,6 @@ const Users = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    
     if (props.userId === undefined) {
       fetch(
         `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${currentPage}/20`
@@ -27,7 +26,6 @@ const Users = (props) => {
           setUsersData((prevUsersData) => [...prevUsersData, ...users.list]);
         });
     }
-
   }, [currentPage]);
 
   useEffect(() => {
@@ -37,10 +35,7 @@ const Users = (props) => {
   });
 
   const handleScroll = () => {
-    if (
-      window.innerHeight + window.scrollY - 1>=
-      document.body.offsetHeight
-    ) {
+    if (window.innerHeight + window.scrollY - 1 >= document.body.offsetHeight) {
       // setShowLoading(true);
       setTimeout(() => {
         setCurrentPage(currentPage + 1);
