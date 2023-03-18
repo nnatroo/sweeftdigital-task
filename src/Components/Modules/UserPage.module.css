@@ -1,9 +1,9 @@
 .user-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 0 14%;
+    margin: 0 17%;
     padding: 2% 1%;
-    border: 1px solid #bbb;
+    border-radius: 1rem;
 
 }
 
@@ -13,6 +13,7 @@
     flex-direction: column;
 }
 
+
 .user-image {
     width: 300px;
 }
@@ -20,4 +21,8 @@
 .user-address-container {
     display: flex;
     flex-direction: column;
+}
+
+.user-page-heading {
+    margin: 0 18%;
 }

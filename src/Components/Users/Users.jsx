@@ -3,22 +3,31 @@ import classes from "../Modules/Users.module.css";
 import { useEffect, useState } from "react";
 import Loading from "../UI/Loading";
 import Skeleton from "../UI/Skeleton";
-import { borderRadius, margin } from "@mui/system";
 
 const Users = (props) => {
   const [usersData, setUsersData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  // const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${currentPage}/20`
-    )
-      .then((response) => response.json())
-      .then((users) => {
-        setUsersData((prevUsersData) => [...prevUsersData, ...users.list]);
-        // setShowLoading(false);
-      });
+    
+    if (props.userId === undefined) {
+      fetch(
+        `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${currentPage}/20`
+      )
+        .then((response) => response.json())
+        .then((users) => {
+          setUsersData((prevUsersData) => [...prevUsersData, ...users.list]);
+        });
+    } else {
+      fetch(
+        `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${props.userId}/friends/${currentPage}/20`
+      )
+        .then((response) => response.json())
+        .then((users) => {
+          setUsersData((prevUsersData) => [...prevUsersData, ...users.list]);
+        });
+    }
+
   }, [currentPage]);
 
   useEffect(() => {
@@ -36,7 +45,6 @@ const Users = (props) => {
       setTimeout(() => {
         setCurrentPage(currentPage + 1);
       }, 500);
-      console.log(currentPage);
     }
   };
 
@@ -52,6 +60,7 @@ const Users = (props) => {
             lastName={user.lastName}
             prefix={user.prefix}
             title={user.title}
+            userId={user.userId}
           />
         ))}
         <Skeleton />

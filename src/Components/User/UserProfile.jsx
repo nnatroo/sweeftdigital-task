@@ -53,6 +53,7 @@ const UserProfile = (props) => {
           </span>
         </fieldset>
       </div>
+      <h2 className={classes["user-page-heading"]}>Friends :</h2>
     </>
   );
 };

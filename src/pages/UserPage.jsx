@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import classes from "../Components/Modules/UserPage.module.css";
-import UserProfile from '../Components/User/UserProfile';
+import UserProfile from "../Components/User/UserProfile";
+import Users from "../Components/Users/Users";
 
 const UserPage = (props) => {
   const { userId } = useParams();
@@ -17,7 +18,12 @@ const UserPage = (props) => {
   }, []);
 
   return (
-    <UserProfile userData={userData}/>
+    <>
+      <div className={classes["user-page-container"]}>
+        <UserProfile userData={userData} />
+        <Users userId={userId} />
+      </div>
+    </>
   );
 };
 
