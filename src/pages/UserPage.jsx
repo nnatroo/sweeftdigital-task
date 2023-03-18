@@ -14,7 +14,6 @@ const UserPage = (props) => {
     )
       .then((res) => res.json())
       .then((data) => setUserData(data));
-    //   console.log(userData.company.name);
   }, []);
 
   return (
