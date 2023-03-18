@@ -26,3 +26,20 @@
 .user-page-heading {
     margin: 0 18%;
 }
+
+@media only screen and (max-width: 968px) {
+    .user-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .user-image {
+        width: 106%;
+    }
+
+    .user-address-container {
+        width: 100%;
+    }
+    
+}
